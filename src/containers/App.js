@@ -28,11 +28,7 @@ render(){
     const filteredRobots = robots.filter(robots => {
         return robots.name.toLowerCase().includes(searchfield.toLowerCase());
     })
-    if(!robots.length){
-        return <h1>Loading</h1>
-    }
-    else{
-        return(
+    return(
         <div className='tc'>
             <h1 className='f1'>Robofriends</h1>
             <SearchBox searchChange={this.onSearchChange}/>
@@ -41,7 +37,6 @@ render(){
             </Scroll> 
         </div>
         );
-    }
     }
 }
 
